@@ -1,33 +1,203 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:200,600');
+
+body{
+	font-family: 'Titillium Web', sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.wrapper {
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+
+
+	background: url("img/3.jpeg") center center no-repeat;
+
+	background-size: 100%; /* Современные браузеры */
+
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.wrapper .name_app{
+	text-align: center;
+	margin-top: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.wrapper .name_app .logo{
+	font-size: 30px;
+	text-decoration: none;
+	color: azure;
+	border: 5px double azure;
+}
+.wrapper .name_app .logo:hover{
+	font-size: 40px;
+	transition: all 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrapper .instruction{
+	text-align: center;
+	margin-top: 45px;
 }
+
+.wrapper .instruction p{
+	font-size: 40px;
+	color: azure;
+}
+
+.temp_input_container{
+	display: inline-block;
+	margin-left: 300px;
+}
+
+.temp_input_container .name_temp{
+	color: #212121;
+	font-size: 55px;
+	font-weight: bold;
+	margin-bottom: 35px;
+	padding-top: 15px;
+	text-transform: uppercase;
+}
+
+/* INPUT*/
+.input {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	max-width: 350px;
+	width: calc(100% - 2em);
+	vertical-align: top;
+}
+
+.input__field {
+	position: relative;
+	display: block;
+	float: right;
+	padding: 0.8em;
+	width: 60%;
+	border: 2px solid #ffffff;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #212121;
+
+	-webkit-appearance: none; /* for box shadows to show on iOS */
+}
+
+.input__field:focus {
+	outline: none;
+}
+
+.input__label {
+	display: inline-block;
+	float: right;
+	padding: 0 1em;
+	width: 40%;
+	color: #ffffff;
+
+	font-size: 17px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.input__label-content {
+	position: relative;
+	display: block;
+	padding: 1.6em 0;
+	width: 100%;
+}
+
+.graphic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
+
+.input__field--minoru {
+	width: 100%;
+	background: #3a3a3a;
+	box-shadow: 0px 0px 0px 2px transparent;
+	color: #ffffff;
+	-webkit-transition: box-shadow 0.3s;
+	transition: box-shadow 0.3s;
+}
+
+.input__label--minoru {
+	padding: 0;
+	width: 100%;
+	text-align: left;
+}
+
+.input__label--minoru::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	width: 100%;
+	height: 5em;
+	box-shadow: 0px 0px 0px 0px;
+	color: rgba(255,255,255, 0.6);
+}
+
+.input__field--minoru:focus {
+	box-shadow: 0px 0px 0px 2px #ffffff;
+}
+
+.input__field--minoru:focus + .input__label--minoru {
+	pointer-events: none;
+}
+
+.input__field--minoru:focus + .input__label--minoru::after {
+	-webkit-animation: anim-shadow 0.3s forwards;
+	animation: anim-shadow 0.3s forwards;
+}
+
+@-webkit-keyframes anim-shadow {
+	to {
+		box-shadow: 0px 0px 100px 50px;
+		opacity: 0;
+	}
+}
+
+@keyframes anim-shadow {
+	to {
+		box-shadow: 0px 0px 100px 50px;
+		opacity: 0;
+	}
+}
+
+.input__label-content--minoru {
+	padding: 0.75em 0.15em;
+}
+
+
+.result{
+	text-align: center;
+	margin-top: 50px;
+	font-size: 65px;
+	color: azure;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
